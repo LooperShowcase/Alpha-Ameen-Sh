@@ -1,0 +1,112 @@
+<OCTYPE html>
+    <html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+       <div class="topnav">
+      <a href="brawlstarsgems.html">brawlstars.gems </a>
+      <a href="FIFA.HTML">Fifa.coin</a>
+      <a href="fortnite.html">fortnite.v bucks</a>
+      <a href="roblox.html">roblox.robux</a>
+      <a href="rocket.html">rocket leage.credit </a>
+      <a href="valorant.html">valorant.points </a>
+      <a href="cod.html">call of duty.points </a>
+    </div>
+    <!-- MAIN (Center website) -->
+    <div class="main">
+    
+   <h1>call of duty.points </h1>
+   
+    
+    
+    
+    <div id="myBtnContainer">
+      <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+    </div>
+    
+    <!-- Portfolio Gallery Grid -->
+    <div class="row">
+      <div class="column nature">
+        <div class="content">
+          <img src="https://store-images.s-microsoft.com/image/apps.9775.13631926718666261.ce695355-38b2-4a6b-b19c-ffdd4dc7654f.bfa6935a-984d-4560-90c9-6fb7c6954b56?q=90&w=480&h=270" width="100%">
+          <h4>1.100=3.70$</h4>
+        </div>
+      </div>
+      </div>
+    
+      <div class="row">
+        <div class="column nature">
+          <div class="content">
+            <img src="https://store-images.s-microsoft.com/image/apps.9775.13631926718666261.ce695355-38b2-4a6b-b19c-ffdd4dc7654f.bfa6935a-984d-4560-90c9-6fb7c6954b56?q=90&w=480&h=270" alt="Mountains" style="width:100%">
+            <h4>5.000=8.99$</h4>
+          </div>
+        </div>
+        </div>
+      
+      
+      
+
+
+
+
+
+
+
+
+
+     
+    </div>
+    
+    <!-- END MAIN -->
+    </div>
+    
+    <script>
+    filterSelection("all")
+    function filterSelection(c) {
+      var x, i;
+      x = document.getElementsByClassName("column");
+      if (c == "all") c = "";
+      for (i = 0; i < x.length; i++) {
+        w3RemoveClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+      }
+    }
+    
+    function w3AddClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+      }
+    }
+    
+    function w3RemoveClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+          arr1.splice(arr1.indexOf(arr2[i]), 1);     
+        }
+      }
+      element.className = arr1.join(" ");
+    }
+    
+    
+    // Add active class to the current button (highlight it)
+    var btnContainer = document.getElementById("myBtnContainer");
+    var btns = btnContainer.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function(){
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+      });
+    }
+    </script>
+    
+    </body>
+    </html>
